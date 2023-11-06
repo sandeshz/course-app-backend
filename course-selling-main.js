@@ -23,19 +23,19 @@ let adminAuthentication = (req, res, next) => {
     }
 }
 
-let userAuthentication = () => {
-    const {username, password} = req.headers;
+// let userAuthentication = () => {
+//     const {username, password} = req.headers;
 
-    const user = USERS.find(a => a.username === username && a.password === password);
-    if(user) {
-        req.user = user;
-        next();
-    } else {
-        res.status(403).json({
-            message: "User authentication failed"
-        });
-    }
-}
+//     const user = USERS.find(a => a.username === username && a.password === password);
+//     if(user) {
+//         req.user = user;
+//         next();
+//     } else {
+//         res.status(403).json({
+//             message: "User authentication failed"
+//         });
+//     }
+// }
 
 { message: 'Admin created successfully' }
 
